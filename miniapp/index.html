@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Зерно — кофейня</title>
+<meta name="description" content="Telegram Mini App кофейни: меню, корзина и заказ с самовывозом.">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- Меню -->
+  <section class="view" id="menu-view">
+    <header class="hero">
+      <div class="brand">
+        <span class="mark"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="6.5" ry="9.5" transform="rotate(30 12 12)"/><path d="M8.6 4.6c3.6 3 3 11.4 6.8 14.8"/></svg></span>
+        <div><b>Зерно</b><small>кофейня · Покровка, 12</small></div>
+      </div>
+      <div class="status"><i></i>Открыто до 22:00 · готовим за 10 минут</div>
+    </header>
+
+    <div class="promo">
+      <div>
+        <b>Каждый 7-й кофе — в подарок</b>
+        <small>У вас 4 из 7 зёрен</small>
+      </div>
+      <div class="beans" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+    </div>
+
+    <nav class="cats" id="cats"></nav>
+    <div class="grid" id="grid"></div>
+    <p class="foot">Демо-проект для портфолио. Фото: Unsplash.</p>
+  </section>
+
+  <!-- Корзина -->
+  <section class="view" id="cart-view" hidden>
+    <header class="bar">
+      <button class="back" data-back aria-label="Назад">←</button>
+      <h2>Ваш заказ</h2>
+      <button class="link" id="clear">Очистить</button>
+    </header>
+    <ul class="cart-list" id="cart-list"></ul>
+
+    <div class="block">
+      <h3>Когда приготовить</h3>
+      <div class="seg" id="when">
+        <label><input type="radio" name="when" value="10" checked><span>Сразу<small>~10 мин</small></span></label>
+        <label><input type="radio" name="when" value="30"><span>Через 30<small>минут</small></span></label>
+        <label><input type="radio" name="when" value="60"><span>Через час<small>&nbsp;</small></span></label>
+      </div>
+    </div>
+    <label class="block">
+      <h3>Комментарий</h3>
+      <textarea id="comment" maxlength="200" placeholder="Например: без сахара, крышку не нужно"></textarea>
+    </label>
+
+    <div class="sum">
+      <div><span>Товары</span><span id="sub"></span></div>
+      <div><span>Самовывоз</span><span>бесплатно</span></div>
+      <div class="tot"><span>Итого</span><b id="total"></b></div>
+    </div>
+  </section>
+
+  <!-- Заказ принят -->
+  <section class="view" id="done-view" hidden>
+    <div class="done">
+      <div class="check">✓</div>
+      <h2 id="done-title"></h2>
+      <p id="done-time"></p>
+      <div class="code-box"><small>Код заказа</small><span class="code" id="done-code"></span></div>
+      <div class="receipt" id="receipt"></div>
+    </div>
+  </section>
+
+  <!-- Нижняя кнопка в браузере. В Telegram вместо неё — родная MainButton. -->
+  <div class="bottom" id="bottom" hidden><button class="main-btn" id="main-btn"></button></div>
+</div>
+
+<dialog class="sheet" id="sheet">
+  <form method="dialog" id="sheet-form">
+    <img id="s-img" alt="">
+    <button class="close" value="cancel" aria-label="Закрыть">✕</button>
+    <div class="sheet-info">
+      <h2 id="s-name"></h2>
+      <p class="desc" id="s-desc"></p>
+      <div id="s-opts"></div>
+    </div>
+    <div class="sheet-foot">
+      <div class="stepper"><button type="button" data-step="-1" aria-label="Меньше">−</button><span id="s-qty">1</span><button type="button" data-step="1" aria-label="Больше">+</button></div>
+      <button class="main-btn" id="s-add" value="add"></button>
+    </div>
+  </form>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>

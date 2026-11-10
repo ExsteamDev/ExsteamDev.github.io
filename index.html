@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exsteam — сайты и Telegram-боты</title>
+<meta name="description" content="Разработка лендингов, сайтов и Telegram-ботов для малого бизнеса и экспертов.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="logo" href="#top">Exsteam<span>.</span></a>
+  <nav>
+    <a href="#services">Услуги</a>
+    <a href="#work">Работы</a>
+    <a href="#process">Как работаю</a>
+  </nav>
+  <a class="btn btn-sm" href="#contact">Обсудить проект</a>
+</header>
+
+<main>
+
+<section class="hero" id="top">
+  <span class="badge"><i></i>Открыт к новым проектам</span>
+  <h1>Сайты и Telegram-боты, <span class="grad">которые приводят клиентов</span></h1>
+  <p class="lead">Я веб-разработчик. Делаю лендинги, сайты с онлайн-записью и Telegram-ботов для малого бизнеса и экспертов — под ключ, с адаптивом и понятными сроками.</p>
+  <div class="actions">
+    <a class="btn" href="https://t.me/Exsteam" target="_blank" rel="noopener">Написать в Telegram</a>
+    <a class="btn btn-ghost" href="#work">Смотреть работы</a>
+  </div>
+  <ul class="facts">
+    <li><b>от 3 дней</b><span>срок лендинга</span></li>
+    <li><b>100%</b><span>адаптив под телефоны</span></li>
+    <li><b>Фикс-цена</b><span>согласуем до старта</span></li>
+  </ul>
+</section>
+
+<section id="services">
+  <div class="head reveal"><span class="kicker">Услуги</span><h2>Чем могу помочь</h2></div>
+  <div class="grid">
+    <article class="card reveal">
+      <div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+      <h3>Лендинги и сайты</h3>
+      <p>Одностраничные сайты для услуг, мероприятий и экспертов. Формы заявок, онлайн-запись, быстрая загрузка.</p>
+      <div class="price"><span>3–7 дней</span><b>от 10 000 ₽</b></div>
+    </article>
+    <article class="card reveal">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg></div>
+      <h3>Telegram-боты и Mini Apps</h3>
+      <p>Запись клиентов, приём заявок, каталог товаров, рассылки. Уведомления владельцу прямо в Telegram.</p>
+      <div class="price"><span>3–10 дней</span><b>от 7 000 ₽</b></div>
+    </article>
+    <article class="card reveal">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+      <h3>Доработка и вёрстка</h3>
+      <p>Поправлю существующий сайт, сверстаю макет из Figma, адаптирую под мобильные, ускорю загрузку.</p>
+      <div class="price"><span>от 1 дня</span><b>от 2 000 ₽</b></div>
+    </article>
+  </div>
+</section>
+
+<section id="work">
+  <div class="head reveal"><span class="kicker">Работы</span><h2>Проекты</h2></div>
+
+  <article class="project reveal">
+    <a class="shot" href="barbershop/index.html" target="_blank"><img src="img/blade.png" alt="Главный экран сайта барбершопа BLADE" loading="lazy"></a>
+    <div class="project-body">
+      <div class="tags"><span>Лендинг</span><span>Онлайн-запись</span><span>Концепт</span></div>
+      <h3>BLADE — сайт барбершопа с онлайн-записью</h3>
+      <p class="muted">Задача: барбершопу нужен сайт, через который клиенты сами записываются к мастеру — без звонков и переписки с администратором.</p>
+      <ul class="checks">
+        <li>Запись в 4 шага: услуга, мастер, дата, свободное время</li>
+        <li>Занятые и прошедшие слоты блокируются автоматически</li>
+        <li>«Записаться» на карточке услуги или мастера сразу подставляет выбор в форму</li>
+        <li>Тёмный дизайн, анимации при прокрутке, адаптив под телефоны</li>
+      </ul>
+      <p class="stack">HTML · CSS · JavaScript</p>
+      <a class="btn btn-sm" href="barbershop/index.html" target="_blank">Открыть сайт →</a>
+    </div>
+  </article>
+
+  <article class="project flip reveal">
+    <div class="tg" role="img" aria-label="Пример: бот присылает в Telegram новое объявление с фото, ценой и данными продавца">
+      <div class="tg-head">
+        <span class="tg-ava">E</span>
+        <div><b>ExsteamParser bot</b><small>бот</small></div>
+      </div>
+      <div class="tg-chat">
+        <div class="tg-msg">
+          <b>📡 Парсинг #19 в процессе</b><br><br>
+          ▶️ #19 VINTED «nike air max» ⭐️5+ 📅30д+ 🙋частные<br>
+          Проверено объявлений: <b>1544</b><br>
+          Найдено объявлений: <b>37</b><br>
+          Время: 2 ч. 14 мин. 5 сек.
+          <span class="tg-time">14:30</span>
+        </div>
+        <div class="tg-kb"><span>⏸️ Пауза</span><span>🔄 Обновить</span></div>
+
+        <div class="tg-msg tg-photo">
+          <img src="img/parser-item.jpg" alt="">
+          <div class="tg-cap">
+            <b>Nike Air Max 90 «Michigan», 43 EU</b><br>
+            💰 <b>65 EUR</b><br>
+            🏷 Nike · 43 · Muy bueno<br>
+            📍 Madrid<br>
+            👤 Продавец @dani_kicks: 12 отзывов | 340 дней на площадке · ✔️ подтверждены: email<br>
+            🕒 только что<br>
+            🔗 <span class="tg-link">Открыть на Vinted</span><br>
+            🔎 #19: nike air max
+            <span class="tg-time">14:32</span>
+          </div>
+        </div>
+        <div class="tg-kb col"><span>🚫 Скрыть продавца</span><span>⏹️ Остановить задачу</span></div>
+      </div>
+    </div>
+    <div class="project-body">
+      <div class="tags"><span>Telegram-бот</span><span>Парсинг</span><span>Мониторинг</span></div>
+      <h3>Парсер объявлений — Telegram-бот, который ловит свежие лоты</h3>
+      <p class="muted">Задача: узнавать о новых объявлениях на маркетплейсах раньше других — без ручного обновления страниц и с фильтрами, которых на самих площадках нет.</p>
+      <ul class="checks">
+        <li>7 площадок: Vinted, Depop, Poshmark, Wallapop, Milanuncios, OLX, OfferUp — 29 стран</li>
+        <li>Проверка каждую минуту, в чат приходит только новое: фото, цена, продавец, ссылка</li>
+        <li>Фильтры по продавцу: отзывы, возраст аккаунта, наличие email/телефона, только частные</li>
+        <li>Несколько задач сразу: пауза, статистика и скрытие продавцов — кнопками в чате</li>
+        <li>Ротация прокси, «быстрый парс» выдачи в .txt, автозапуск на Windows</li>
+      </ul>
+      <p class="stack">Python · aiogram 3 · asyncio · SQLite · curl_cffi</p>
+      <div class="project-links">
+        <a class="btn btn-sm" href="#contact">Хочу такого бота →</a>
+        <a class="btn btn-ghost btn-sm" href="https://github.com/BomjikNoob/Parser" target="_blank" rel="noopener">Код на GitHub</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="project reveal">
+    <a class="shot" href="crypto/index.html" target="_blank"><img src="img/nexa.png" alt="Дашборд криптокошелька Nexa: баланс, график, активы" loading="lazy"></a>
+    <div class="project-body">
+      <div class="tags"><span>Веб-приложение</span><span>Дашборд</span><span>Концепт</span></div>
+      <h3>Nexa — дашборд криптокошелька</h3>
+      <p class="muted">Задача: интерфейс кошелька, где баланс, активы, рынок и обмен видны на одном экране и понятны даже новичку в крипте.</p>
+      <ul class="checks">
+        <li>График баланса на чистом SVG, без библиотек: периоды 1Д / 1Н / 1М / 1Г с анимацией</li>
+        <li>Баланс и изменения считаются из данных по монетам, а не вписаны вручную</li>
+        <li>Активы и рынок с мини-графиками за 7 дней, рост и падение подсвечены цветом</li>
+        <li>Рабочий обмен между 8 монетами: курс, комиссия и проверка баланса на лету; после обмена обновляются баланс, активы и история</li>
+        <li>Адаптив под телефоны</li>
+      </ul>
+      <p class="stack">HTML · CSS · JavaScript · SVG</p>
+      <a class="btn btn-sm" href="crypto/index.html" target="_blank">Открыть дашборд →</a>
+    </div>
+  </article>
+
+  <article class="project flip reveal">
+    <a class="shot" href="miniapp/index.html" target="_blank"><img src="img/zerno.png" alt="Три экрана Mini App кофейни «Зерно»: меню, карточка напитка, корзина" loading="lazy"></a>
+    <div class="project-body">
+      <div class="tags"><span>Telegram Mini App</span><span>Заказ онлайн</span><span>Концепт</span></div>
+      <h3>Зерно — заказ кофе прямо в Telegram</h3>
+      <p class="muted">Задача: гости кофейни заказывают кофе с собой, не выходя из Telegram и не скачивая отдельное приложение, — и забирают его готовым к приходу.</p>
+      <ul class="checks">
+        <li>Меню по категориям, карточка напитка с выбором объёма и молока, цена пересчитывается сразу</li>
+        <li>Корзина с вариантами позиций, время приготовления, комментарий и код заказа на выдачу</li>
+        <li>Нативный вид в Telegram: тема пользователя, MainButton, BackButton, вибрация, имя из профиля</li>
+        <li>Открывается и в обычном браузере — с собственной нижней кнопкой</li>
+      </ul>
+      <p class="stack">HTML · CSS · JavaScript · Telegram WebApp API</p>
+      <a class="btn btn-sm" href="miniapp/index.html" target="_blank">Открыть Mini App →</a>
+    </div>
+  </article>
+</section>
+
+<section id="process">
+  <div class="head reveal"><span class="kicker">Процесс</span><h2>Как я работаю</h2></div>
+  <div class="grid steps">
+    <div class="card reveal"><span class="num">01</span><h3>Обсуждаем задачу</h3><p>Бесплатно: цели, примеры, которые нравятся, сроки и бюджет.</p></div>
+    <div class="card reveal"><span class="num">02</span><h3>Структура и цена</h3><p>Показываю план сайта или бота и фиксирую стоимость до начала работы.</p></div>
+    <div class="card reveal"><span class="num">03</span><h3>Разработка</h3><p>Показываю промежуточный результат, вносим правки по ходу.</p></div>
+    <div class="card reveal"><span class="num">04</span><h3>Запуск</h3><p>Размещаю проект, подключаю домен и помогаю после сдачи.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="cta reveal">
+    <h2>Есть задача? <span class="grad">Давайте обсудим</span></h2>
+    <p class="lead">Опишите идею в паре предложений — отвечу в течение дня, подскажу решение и примерную стоимость. Это бесплатно.</p>
+    <a class="btn" href="https://t.me/Exsteam" target="_blank" rel="noopener">Написать в Telegram</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">© 2026 Exsteam · Веб-разработка</footer>
+
+<script>
+  const io = new IntersectionObserver(entries => {
+    for (const en of entries) if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

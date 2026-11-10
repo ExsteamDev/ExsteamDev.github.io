@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BLADE — барбершоп на Покровке</title>
+<meta name="description" content="Мужские стрижки, бритьё и уход за бородой. Онлайн-запись за минуту.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="nav">
+  <a class="logo" href="#top">BLADE<span>.</span></a>
+  <nav>
+    <a href="#services">Услуги</a>
+    <a href="#masters">Мастера</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+  <a class="btn btn-sm" href="#booking">Записаться</a>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div>
+    <p class="eyebrow">Барбершоп · Москва, Покровка 12</p>
+    <h1>Стрижка, после которой <em>не нужно</em> укладываться</h1>
+    <p class="lead">Мужские стрижки, бритьё опасной бритвой и уход за бородой. Онлайн-запись за минуту, без звонков.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#booking">Выбрать время</a>
+      <a class="btn btn-ghost" href="#services">Цены</a>
+    </div>
+    <ul class="stats">
+      <li><b>8 лет</b><span>работаем</span></li>
+      <li><b>12 000+</b><span>стрижек</span></li>
+      <li><b>4.9 ★</b><span>на Яндекс Картах</span></li>
+    </ul>
+  </div>
+  <div class="hero-art">
+    <img src="img/hero.jpg" alt="Барбер делает укладку клиенту">
+    <span class="since">EST. 2018</span>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-head reveal">
+    <div><span class="kicker">Услуги и цены</span><h2>Что мы делаем</h2></div>
+    <p>Цена фиксированная, без доплат за длину и густоту. Укладка и консультация по уходу включены.</p>
+  </div>
+  <div class="grid">
+    <article class="card service reveal" data-service="Мужская стрижка" data-price="2 200">
+      <h3>Мужская стрижка</h3>
+      <p>Любая сложность: от классики до фейда. Мытьё головы и укладка.</p>
+      <div class="service-foot"><div><span class="price">2 200 ₽</span> <span class="time">· 45 мин</span></div><a class="pick" href="#booking">Записаться →</a></div>
+    </article>
+    <article class="card service reveal" data-service="Стрижка машинкой" data-price="1 400">
+      <h3>Стрижка машинкой</h3>
+      <p>Одна или две насадки, аккуратный окантовочный контур.</p>
+      <div class="service-foot"><div><span class="price">1 400 ₽</span> <span class="time">· 30 мин</span></div><a class="pick" href="#booking">Записаться →</a></div>
+    </article>
+    <article class="card service reveal" data-service="Моделирование бороды" data-price="1 500">
+      <h3>Моделирование бороды</h3>
+      <p>Форма под тип лица, контур опасной бритвой, горячее полотенце.</p>
+      <div class="service-foot"><div><span class="price">1 500 ₽</span> <span class="time">· 30 мин</span></div><a class="pick" href="#booking">Записаться →</a></div>
+    </article>
+    <article class="card service reveal" data-service="Стрижка + борода" data-price="3 300">
+      <h3>Стрижка + борода</h3>
+      <p>Полный образ за один визит. Выгоднее, чем по отдельности.</p>
+      <div class="service-foot"><div><span class="price">3 300 ₽</span> <span class="time">· 75 мин</span></div><a class="pick" href="#booking">Записаться →</a></div>
+    </article>
+    <article class="card service reveal" data-service="Королевское бритьё" data-price="2 000">
+      <h3>Королевское бритьё</h3>
+      <p>Распаривание, бритьё опасной бритвой, уходовая маска.</p>
+      <div class="service-foot"><div><span class="price">2 000 ₽</span> <span class="time">· 45 мин</span></div><a class="pick" href="#booking">Записаться →</a></div>
+    </article>
+    <article class="card service reveal" data-service="Отец + сын" data-price="3 600">
+      <h3>Отец + сын</h3>
+      <p>Две стрижки в одно время у соседних кресел. Сыну до 12 лет.</p>
+      <div class="service-foot"><div><span class="price">3 600 ₽</span> <span class="time">· 80 мин</span></div><a class="pick" href="#booking">Записаться →</a></div>
+    </article>
+  </div>
+</section>
+
+<section id="masters">
+  <div class="section-head reveal">
+    <div><span class="kicker">Команда</span><h2>Наши мастера</h2></div>
+    <p>Каждый мастер прошёл обучение в академии и регулярно ездит на чемпионаты.</p>
+  </div>
+  <div class="grid">
+    <article class="card master reveal" data-master="Артём">
+      <div class="avatar">А</div>
+      <h3>Артём</h3>
+      <p class="role">Топ-барбер · 8 лет</p>
+      <p>Фейды, классические стрижки, сложные переходы.</p>
+      <a class="btn btn-ghost btn-sm pick" href="#booking">Записаться к Артёму</a>
+    </article>
+    <article class="card master reveal" data-master="Денис">
+      <div class="avatar">Д</div>
+      <h3>Денис</h3>
+      <p class="role">Барбер · 5 лет</p>
+      <p>Бороды и бритьё. Подберёт форму, которую легко поддерживать дома.</p>
+      <a class="btn btn-ghost btn-sm pick" href="#booking">Записаться к Денису</a>
+    </article>
+    <article class="card master reveal" data-master="Марк">
+      <div class="avatar">М</div>
+      <h3>Марк</h3>
+      <p class="role">Барбер · 3 года</p>
+      <p>Текстурные и длинные стрижки, кроп, мюллет.</p>
+      <a class="btn btn-ghost btn-sm pick" href="#booking">Записаться к Марку</a>
+    </article>
+  </div>
+</section>
+
+<section id="booking" class="booking">
+  <div class="reveal">
+    <span class="kicker">Онлайн-запись</span>
+    <h2>Запишитесь за минуту</h2>
+    <p class="lead">Выберите услугу, мастера и свободное время. Напомним о визите за 2 часа.</p>
+    <ul class="info-list">
+      <li><span>Адрес</span><b>Москва, ул. Покровка, 12</b></li>
+      <li><span>Часы</span><b>Ежедневно 10:00–21:00</b></li>
+      <li><span>Отмена</span><b>Бесплатно за 3 часа до визита</b></li>
+    </ul>
+  </div>
+
+  <form id="booking-form" class="card form reveal">
+    <div class="row">
+      <label class="field">Услуга
+        <select name="service" required><option value="" disabled selected>Выберите услугу</option></select>
+      </label>
+      <label class="field">Мастер
+        <select name="master" required><option value="" disabled selected>Выберите мастера</option></select>
+      </label>
+    </div>
+    <label class="field">Дата <input type="date" name="date" required></label>
+    <fieldset>
+      <legend>Время</legend>
+      <div id="slots" class="slots"></div>
+    </fieldset>
+    <div class="row">
+      <label class="field">Имя <input name="name" autocomplete="given-name" placeholder="Александр" required></label>
+      <label class="field">Телефон <input type="tel" name="phone" autocomplete="tel" placeholder="+7 900 000-00-00" pattern="[+0-9\s()\-]{10,18}" required></label>
+    </div>
+    <button class="btn" type="submit">Записаться</button>
+    <p class="note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+  </form>
+</section>
+
+<section id="reviews">
+  <div class="section-head reveal">
+    <div><span class="kicker">Отзывы</span><h2>Что говорят клиенты</h2></div>
+    <p>Более 600 отзывов на Яндекс Картах и в 2ГИС.</p>
+  </div>
+  <div class="grid">
+    <blockquote class="card review reveal">
+      <div class="stars">★★★★★</div>
+      <p>Хожу к Артёму третий год. Ни разу не было, чтобы стрижка «не получилась». Записываюсь с телефона за 20 секунд.</p>
+      <footer>Игорь, постоянный клиент</footer>
+    </blockquote>
+    <blockquote class="card review reveal">
+      <div class="stars">★★★★★</div>
+      <p>Денис сделал бороде нормальную форму, теперь сам поддерживаю дома. Атмосфера отличная, кофе тоже.</p>
+      <footer>Руслан</footer>
+    </blockquote>
+    <blockquote class="card review reveal">
+      <div class="stars">★★★★★</div>
+      <p>Пришли с сыном на «Отец + сын», стригли одновременно. Ребёнок в восторге, уже просится снова.</p>
+      <footer>Максим</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="section-head reveal">
+    <div><span class="kicker">Контакты</span><h2>Как нас найти</h2></div>
+  </div>
+  <div class="grid">
+    <div class="card contact reveal"><span>Адрес</span><b>ул. Покровка, 12</b><p>5 минут от м. Китай-город</p></div>
+    <div class="card contact reveal"><span>Телефон</span><b>+7 (495) 000-00-00</b><p>Ежедневно 10:00–21:00</p></div>
+    <div class="card contact reveal"><span>Telegram</span><b>@blade_barbershop</b><p>Ответим за 10 минут</p></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <span class="logo">BLADE<span>.</span></span>
+  <p>Демо-проект Exsteam для портфолио. Бизнес и контакты вымышленные. Фото: André Reis / Unsplash.</p>
+</footer>
+
+<dialog id="done">
+  <div class="check">✓</div>
+  <h3>Вы записаны!</h3>
+  <p></p>
+  <form method="dialog"><button class="btn">Отлично</button></form>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>

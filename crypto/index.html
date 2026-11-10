@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nexa — криптокошелёк</title>
+<meta name="description" content="Демо-интерфейс криптокошелька: баланс, активы, рынок и обмен.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="side">
+    <a class="logo" href="#"><span class="logo-mark"></span>Nexa</a>
+    <nav>
+      <a class="active" href="#"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Обзор</a>
+      <a href="#"><svg class="i" viewBox="0 0 24 24"><path d="M21.2 15.9A10 10 0 1 1 8 2.8"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>Портфель</a>
+      <a href="#"><svg class="i" viewBox="0 0 24 24"><path d="m23 6-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>Рынок</a>
+      <a href="#"><svg class="i" viewBox="0 0 24 24"><path d="m17 1 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="m7 23-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Обмен</a>
+      <a href="#"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>История</a>
+      <a href="#"><svg class="i" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>Настройки</a>
+    </nav>
+    <div class="promo">
+      <b>Nexa Pro</b>
+      <p>Комиссия 0% на обмен и сигналы по рынку в реальном времени.</p>
+      <button class="btn">Подключить</button>
+    </div>
+    <p class="demo">Демо-интерфейс. Данные вымышленные.</p>
+  </aside>
+
+  <main class="main">
+    <header class="top">
+      <div>
+        <h1>Обзор</h1>
+        <p class="muted" id="today"></p>
+      </div>
+      <label class="search">
+        <svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input placeholder="Поиск монет" aria-label="Поиск монет">
+      </label>
+      <button class="icon-btn" aria-label="Уведомления">
+        <svg class="i" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><i></i>
+      </button>
+      <div class="user"><span class="ava">А</span><div><b>Алексей</b><small>ID 4821 0937</small></div></div>
+    </header>
+
+    <section class="grid-top">
+      <article class="panel balance">
+        <div class="balance-head">
+          <div>
+            <p class="muted">Общий баланс</p>
+            <h2 class="big" id="total"></h2>
+            <p class="chg" id="change"></p>
+          </div>
+          <div class="tabs">
+            <button data-period="1d" class="active">1Д</button>
+            <button data-period="1w">1Н</button>
+            <button data-period="1m">1М</button>
+            <button data-period="1y">1Г</button>
+          </div>
+        </div>
+        <svg id="chart" class="chart" viewBox="0 0 800 260" preserveAspectRatio="none" aria-hidden="true"></svg>
+      </article>
+
+      <form class="panel swap" id="swap" autocomplete="off">
+        <h3>Обмен</h3>
+        <div class="field">
+          <small>Отдаёте</small>
+          <div class="row">
+            <input id="amount" inputmode="decimal" value="0,5" aria-label="Сколько отдаёте">
+            <label class="pill"><i class="coin" id="from-icon"></i><select id="from" aria-label="Монета, которую отдаёте"></select></label>
+          </div>
+          <div class="row"><small id="from-usd"></small><button type="button" class="max" id="max"></button></div>
+        </div>
+        <button type="button" class="swap-btn" id="flip" aria-label="Поменять местами">⇅</button>
+        <div class="field">
+          <small>Получаете</small>
+          <div class="row">
+            <output id="out" for="amount from to"></output>
+            <label class="pill"><i class="coin" id="to-icon"></i><select id="to" aria-label="Монета, которую получаете"></select></label>
+          </div>
+          <small id="rate"></small>
+        </div>
+        <dl class="meta">
+          <div><dt>Комиссия</dt><dd id="fee"></dd></div>
+          <div><dt>Время</dt><dd>~30 сек</dd></div>
+        </dl>
+        <button class="btn wide" id="submit">Обменять</button>
+      </form>
+    </section>
+
+    <section class="assets" id="assets"></section>
+
+    <section class="grid-bottom">
+      <article class="panel market">
+        <div class="panel-head"><h3>Рынок</h3><a href="#">Все монеты →</a></div>
+        <table>
+          <thead><tr><th>Монета</th><th>Цена</th><th>24ч</th><th>Капитализация</th><th>7 дней</th></tr></thead>
+          <tbody id="market"></tbody>
+        </table>
+      </article>
+
+      <article class="panel tx">
+        <div class="panel-head"><h3>Последние операции</h3><a href="#">Все →</a></div>
+        <ul id="tx-list">
+          <li>
+            <span class="tx-ico up"><svg class="i" viewBox="0 0 24 24"><path d="M17 7 7 17M17 17H7V7"/></svg></span>
+            <div class="tx-main"><b>Покупка BTC</b><small>Сегодня, 14:32</small></div>
+            <div class="tx-amt up">+0,0152 BTC<small>$1 496,00</small></div>
+          </li>
+          <li>
+            <span class="tx-ico acc"><svg class="i" viewBox="0 0 24 24"><path d="m17 1 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="m7 23-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span>
+            <div class="tx-main"><b>Обмен ETH → USDT</b><small>Сегодня, 11:05</small></div>
+            <div class="tx-amt">1 742,31 USDT<small>−0,5 ETH</small></div>
+          </li>
+          <li>
+            <span class="tx-ico up"><svg class="i" viewBox="0 0 24 24"><path d="M17 7 7 17M17 17H7V7"/></svg></span>
+            <div class="tx-main"><b>Получение TON</b><small>от UQB4…k3fA · вчера, 21:40</small></div>
+            <div class="tx-amt up">+120 TON<small>$830,40</small></div>
+          </li>
+          <li>
+            <span class="tx-ico down"><svg class="i" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            <div class="tx-main"><b>Отправка SOL</b><small>на 7xKX…9pQ2 · вчера, 18:12</small></div>
+            <div class="tx-amt down">−4,5 SOL<small>$964,67</small></div>
+          </li>
+          <li>
+            <span class="tx-ico acc"><svg class="i" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
+            <div class="tx-main"><b>Награда за стейкинг</b><small>8 ноября</small></div>
+            <div class="tx-amt up">+0,0031 ETH<small>$10,80</small></div>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
