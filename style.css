@@ -114,6 +114,7 @@ h2 { font-size: clamp(28px, 4vw, 44px); }
 .cta { padding: 80px 32px; text-align: center; border: 1px solid var(--border); border-radius: 32px;
   background: radial-gradient(600px circle at 50% 0%, rgba(139, 92, 246, .18), transparent 70%), var(--surface); }
 .cta .lead { margin: 20px auto 36px; }
+.cta .actions { justify-content: center; margin-top: 0; }
 
 .footer { padding: 32px var(--wrap); border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; text-align: center; }
 
