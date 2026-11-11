@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Exsteam — сайты и Telegram-боты</title>
 <meta name="description" content="Разработка лендингов, сайтов и Telegram-ботов для малого бизнеса и экспертов.">
+<meta name="theme-color" content="#09090d">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://exsteamdev.github.io/">
+<meta property="og:title" content="Exsteam — сайты и Telegram-боты">
+<meta property="og:description" content="Лендинги, сайты с онлайн-записью, Telegram-боты и Mini Apps под ключ. Внутри — живые демо проектов.">
+<meta property="og:image" content="https://exsteamdev.github.io/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x2='1' y2='1'%3E%3Cstop stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M11 9h10v3h-6.5v2.5H20v3h-5.5V20H21v3H11z' fill='%230b0b10'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
@@ -27,16 +37,23 @@
 <main>
 
 <section class="hero" id="top">
-  <span class="badge"><i></i>Открыт к новым проектам</span>
-  <h1>Сайты и Telegram-боты, <span class="grad">которые приводят клиентов</span></h1>
-  <p class="lead">Я веб-разработчик. Делаю лендинги, сайты с онлайн-записью и Telegram-ботов для малого бизнеса и экспертов — под ключ, с адаптивом и понятными сроками.</p>
-  <div class="actions">
-    <a class="btn" href="https://t.me/exsteamz" target="_blank" rel="noopener">Написать в Telegram</a>
-    <a class="btn btn-ghost" href="#work">Смотреть работы</a>
+  <div>
+    <span class="badge"><i></i>Открыт к новым проектам</span>
+    <h1>Сайты и Telegram-боты, <span class="grad">которые приводят клиентов</span></h1>
+    <p class="lead">Я веб-разработчик. Делаю лендинги, сайты с онлайн-записью и Telegram-ботов для малого бизнеса и экспертов — под ключ, с адаптивом и понятными сроками.</p>
+    <div class="actions">
+      <a class="btn" href="https://t.me/exsteamz?text=Здравствуйте! Хочу обсудить проект." target="_blank" rel="noopener">Написать в Telegram</a>
+      <a class="btn btn-ghost" href="#work">Смотреть работы</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <a href="#blade" aria-label="Проект BLADE"><img src="img/blade.webp" alt="" width="1800" height="1125" loading="lazy"></a>
+    <a href="#nexa" aria-label="Проект Nexa"><img src="img/nexa.webp" alt="" width="1800" height="1125" loading="lazy"></a>
+    <a href="#zerno" aria-label="Проект «Зерно»"><img src="img/zerno.webp" alt="" width="1600" height="1000" loading="lazy"></a>
   </div>
   <ul class="facts">
     <li><b>от 3 дней</b><span>срок лендинга</span></li>
-    <li><b>100%</b><span>адаптив под телефоны</span></li>
+    <li><b>4 проекта</b><span>живые демо и код ниже</span></li>
     <li><b>Фикс-цена</b><span>согласуем до старта</span></li>
   </ul>
 </section>
@@ -68,8 +85,8 @@
 <section id="work">
   <div class="head reveal"><span class="kicker">Работы</span><h2>Проекты</h2></div>
 
-  <article class="project reveal">
-    <a class="shot" href="barbershop/index.html" target="_blank"><img src="img/blade.png" alt="Главный экран сайта барбершопа BLADE" loading="lazy"></a>
+  <article class="project reveal" id="blade">
+    <a class="shot" href="barbershop/index.html" target="_blank"><img src="img/blade.webp" alt="Главный экран сайта барбершопа BLADE" width="1800" height="1125" loading="lazy"></a>
     <div class="project-body">
       <div class="tags"><span>Лендинг</span><span>Онлайн-запись</span><span>Концепт</span></div>
       <h3>BLADE — сайт барбершопа с онлайн-записью</h3>
@@ -132,14 +149,14 @@
       </ul>
       <p class="stack">Python · aiogram 3 · asyncio · SQLite · curl_cffi</p>
       <div class="project-links">
-        <a class="btn btn-sm" href="#contact">Хочу такого бота →</a>
+        <a class="btn btn-sm" href="https://t.me/exsteamz?text=Здравствуйте! Хочу бота как ваш парсер объявлений." target="_blank" rel="noopener">Хочу такого бота →</a>
         <a class="btn btn-ghost btn-sm" href="https://github.com/ExsteamDev/Parser" target="_blank" rel="noopener">Код на GitHub</a>
       </div>
     </div>
   </article>
 
-  <article class="project reveal">
-    <a class="shot" href="crypto/index.html" target="_blank"><img src="img/nexa.png" alt="Дашборд криптокошелька Nexa: баланс, график, активы" loading="lazy"></a>
+  <article class="project reveal" id="nexa">
+    <a class="shot" href="crypto/index.html" target="_blank"><img src="img/nexa.webp" alt="Дашборд криптокошелька Nexa: баланс, график, активы" width="1800" height="1125" loading="lazy"></a>
     <div class="project-body">
       <div class="tags"><span>Веб-приложение</span><span>Дашборд</span><span>Концепт</span></div>
       <h3>Nexa — дашборд криптокошелька</h3>
@@ -156,8 +173,8 @@
     </div>
   </article>
 
-  <article class="project flip reveal">
-    <a class="shot" href="miniapp/index.html" target="_blank"><img src="img/zerno.png" alt="Три экрана Mini App кофейни «Зерно»: меню, карточка напитка, корзина" loading="lazy"></a>
+  <article class="project flip reveal" id="zerno">
+    <a class="shot" href="miniapp/index.html" target="_blank"><img src="img/zerno.webp" alt="Три экрана Mini App кофейни «Зерно»: меню, карточка напитка, корзина" width="1600" height="1000" loading="lazy"></a>
     <div class="project-body">
       <div class="tags"><span>Telegram Mini App</span><span>Заказ онлайн</span><span>Концепт</span></div>
       <h3>Зерно — заказ кофе прямо в Telegram</h3>
@@ -192,7 +209,7 @@
     <h2>Есть задача? <span class="grad">Давайте обсудим</span></h2>
     <p class="lead">Опишите идею в паре предложений — отвечу в течение дня, подскажу решение и примерную стоимость. Это бесплатно.</p>
     <div class="actions">
-      <a class="btn" href="https://t.me/exsteamz" target="_blank" rel="noopener">Написать в Telegram</a>
+      <a class="btn" href="https://t.me/exsteamz?text=Здравствуйте! Хочу обсудить проект." target="_blank" rel="noopener">Написать в Telegram</a>
       <a class="btn btn-ghost" href="https://t.me/exsteamz_dev" target="_blank" rel="noopener">Канал с работами</a>
     </div>
   </div>
@@ -200,7 +217,7 @@
 
 </main>
 
-<footer class="footer">© 2026 Exsteam · Веб-разработка</footer>
+<footer class="footer">© 2026 Exsteam · <a href="https://t.me/exsteamz" target="_blank" rel="noopener">Telegram</a> · <a href="https://t.me/exsteamz_dev" target="_blank" rel="noopener">Канал</a> · <a href="https://github.com/ExsteamDev" target="_blank" rel="noopener">GitHub</a></footer>
 
 <script>
   const io = new IntersectionObserver(entries => {

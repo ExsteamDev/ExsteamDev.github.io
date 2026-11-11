@@ -14,6 +14,7 @@
 html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 body { background: var(--bg); color: var(--text); font: 16px/1.65 Manrope, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 2px solid var(--a2); outline-offset: 3px; border-radius: 4px; }
 h1, h2, h3, .logo { font-family: Unbounded, sans-serif; font-weight: 600; line-height: 1.15; letter-spacing: -.02em; }
 section { padding: 110px var(--wrap); }
 .muted { color: var(--muted); }
@@ -43,14 +44,21 @@ section { padding: 110px var(--wrap); }
 .btn-ghost:hover { border-color: rgba(139, 92, 246, .6); box-shadow: none; }
 
 /* Первый экран */
-.hero { min-height: calc(100vh - 70px); display: flex; flex-direction: column; justify-content: center; }
+.hero { min-height: calc(100vh - 70px); display: grid; grid-template-columns: 1.25fr 1fr; column-gap: 56px; align-items: center; align-content: center; }
+.hero-art { position: relative; aspect-ratio: 1 / 1.02; }
+.hero-art a { position: absolute; width: 70%; overflow: hidden; border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 30px 60px -20px #000; transition: translate .3s, rotate .3s; }
+.hero-art a:nth-child(1) { top: 0; right: 0; rotate: 3deg; }
+.hero-art a:nth-child(2) { top: 31%; left: 0; rotate: -3deg; }
+.hero-art a:nth-child(3) { bottom: 0; right: 5%; rotate: 2deg; }
+.hero-art a:hover { z-index: 1; translate: 0 -6px; rotate: 0deg; border-color: rgba(139, 92, 246, .6); }
+.hero-art img { display: block; width: 100%; height: auto; }
 .badge { width: fit-content; display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--muted); font-size: 14px; }
 .badge i { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; animation: pulse 2s infinite; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, .6); } 70%, 100% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); } }
-h1 { font-size: clamp(34px, 6vw, 70px); max-width: 920px; margin: 28px 0 24px; }
+h1 { font-size: clamp(34px, 3.9vw, 48px); margin: 28px 0 24px; }
 .lead { color: var(--muted); font-size: 18px; max-width: 620px; }
 .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 36px; }
-.facts { display: flex; gap: 48px; flex-wrap: wrap; list-style: none; padding: 32px 0 0; margin-top: 64px; border-top: 1px solid var(--border); }
+.facts { grid-column: 1 / -1; display: flex; gap: 48px; flex-wrap: wrap; list-style: none; padding: 32px 0 0; margin-top: 64px; border-top: 1px solid var(--border); }
 .facts b { display: block; font: 600 20px Unbounded, sans-serif; }
 .facts span { color: var(--muted); font-size: 14px; }
 
@@ -60,6 +68,8 @@ h1 { font-size: clamp(34px, 6vw, 70px); max-width: 920px; margin: 28px 0 24px; }
 h2 { font-size: clamp(28px, 4vw, 44px); }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; }
 .card { display: flex; flex-direction: column; padding: 32px; border: 1px solid var(--border); border-radius: 20px; background: var(--surface); backdrop-filter: blur(6px); transition: border-color .25s, translate .25s; }
+.steps { grid-template-columns: repeat(4, 1fr); }
+.steps .card { padding: 28px 24px; }
 .card:hover { border-color: rgba(139, 92, 246, .45); translate: 0 -4px; }
 .card h3 { font-size: 19px; margin-bottom: 12px; }
 .card p { color: var(--muted); font-size: 15px; flex: 1; }
@@ -124,6 +134,9 @@ h2 { font-size: clamp(28px, 4vw, 44px); }
 
 @media (max-width: 860px) {
   .project, .project.flip { grid-template-columns: 1fr; gap: 24px; padding: 16px; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-art { display: none; }
+  .steps { grid-template-columns: 1fr 1fr; }
   .project-body, .flip .project-body { padding: 8px; }
   .flip .tg, .flip .shot { order: 0; }
   .flip .tg { height: auto; }
@@ -137,6 +150,7 @@ h2 { font-size: clamp(28px, 4vw, 44px); }
   .hero { min-height: auto; }
   .facts { gap: 28px; }
   .cta { padding: 56px 20px; }
+  .steps { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
